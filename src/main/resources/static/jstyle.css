@@ -1,0 +1,48 @@
+/*table {
+    counter-reset: rowNumber;
+}
+
+table tr {
+    counter-increment: rowNumber;
+}
+
+table tr td:first-child::before {
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+}
+
+th[col-sm-2]{
+    padding: 16px;
+
+}*/
+/*.table td, .table th{
+
+    padding: 3rem;!important;
+}*/
+
+/*.jumbotron {
+ !*   background-image: url("https://www.tutorialmines.net/wp-content/uploads/2015/11/info-icon.png");*!
+!*    min-height: 50%;*!
+!*    background-repeat: no-repeat;*!
+!*    background-position: right top;*!
+!*    min-height: 300px;*!
+  !*  padding: 5em inherit;*!
+   !* background: url('http://placekitten.com/800/500') no-repeat center center;*!
+!*    background-size: cover;*!
+  !*  padding-top: 20%;*!
+  !*  padding-bottom: 20%;*!
+   !* height: 10%;*!
+}*/
+
+
+fieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px groove;
+}

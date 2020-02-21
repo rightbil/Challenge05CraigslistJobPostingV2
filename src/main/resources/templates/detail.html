@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="www.thymeleaf.org">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="jstyle" type="text/css">
+</head>
+<body>
+<div th:replace="base :: navlinks"></div>
+
+<h1 class="jumbotron text-center">Job Lists <br/>
+    <a href="/add" >Add Job</a>
+</h1>
+
+<div class="container-fluid">
+    <table class="table table-bordered table-striped">
+        <div class="container-fluid py-3">
+            <tr class="row thread-light">
+                <th class="col-sm-2">Title</th>
+                <th class="col-sm-2">Description</th>
+                <th class="col-sm-2">Post Date</th>
+                <th class="col-sm-2">Author</th>
+                <th class="col-sm-2">Phone</th>
+                <th class="col-sm-2">Admin Panel</th>
+
+            </tr>
+             <tr class="row">
+                <td class="col-sm-2" th:text="${job.title}"></td>
+                <td class="col-sm-2" th:text="${job.description}"></td>
+                <td class="col-sm-2" th:text="${job.postdate}"></td>
+                <td class="col-sm-2" th:text="${job.author}"></td>
+                <td class="col-sm-2" th:text="${job.phone}"></td>
+                <td class="col-sm-2">
+
+                    <a th:href="@{/update/{id}(id=${job.id})}">Update |</a>
+                    <a th:href="@{/delete/{id}(id=${job.id})}">Delete</a>
+
+                </td>
+             </tr>
+
+        </div>
+    </table>
+</div>
+
+<div th:replace="base :: footer"></div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
