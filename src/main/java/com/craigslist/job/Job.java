@@ -15,6 +15,17 @@ public class Job {
     private String postdate;
     private String author;
     private String phone;
+    private String image;
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+
 
     public long getId() {
         return id;

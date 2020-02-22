@@ -15,7 +15,8 @@ import javax.validation.Valid;
 public class HomeController {
     @Autowired
     JobRepository jobRepository;
-
+    @Autowired
+    CloudinaryConfig cloudc;
     @RequestMapping("/")
     public String listJobs(Model model) {
         model.addAttribute("jobs", jobRepository.findAll());
@@ -42,6 +43,37 @@ public class HomeController {
    /*     model.addAttribute("jobs", jobRepository.findAll());*/
         return "about";
     }
+    /*image
+    *
+    @PostMapping("/form")
+    public String processImage(@ModelAttribute ToDoList todolist,
+                               @RequestParam("file") MultipartFile file) {
+        if (file.isEmpty()) {
+            return "redirect:/list";
+        }
+        try {
+            Map uploadResult = cloudc.upload(file.getBytes(),
+                    ObjectUtils.asMap("resourcetype", "auto"));
+            todolist.setPicture(uploadResult.get("url").toString());
+            toDoListRepository.save(todolist);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "redirect:/list";
+        }
+        return "redirect:/";
+    }
+
+
+    *
+    *
+    *
+    *
+    *
+    * */
+
+
+
+
 
     /*detail*/
     @RequestMapping("/detail/{id}")
